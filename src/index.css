@@ -2,37 +2,30 @@
   margin: 0;
   padding: 0;
 }
-
 .estilo1 {
   background-color: #FFFFFF;
   color: #6bcdb1;
 }
-
 .estilo2 {
   background-color: #151515;
   color: #6bcdb1;
 }
-
 .navbar {
   background-color: #6bcdb1;
   color: #151515;
 }
-
-.alineacion-cartWidget {
-top: 0;
-}
-
+/* .alineacion-cartWidget {
+top: 10;
+} */
 .estilo-footer {
 background-color: #4A4A4A;
 color: #FFFFFF;
-padding-top: 1em;
+padding-top: 3rem;
+padding-bottom: 3rem;
 }
-
 body {
   font-family: Rubik;
 }
-
-
 .alineacion-dataScience {
   margin: 2em;
   padding-left: 4em;

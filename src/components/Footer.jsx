@@ -6,18 +6,15 @@ const Footer = () => {
             <div className="container ">
                 <div className="row">
                     <div className="col-md-12 text-center ">
-                            
-                    <p>
-                        <a href={"https://www.facebook.com/Codespaceacademy/"} target={"_blank"}><img src={"images/SM-RRSS-04.png"} alt="Facebook" width={24}/></a>
-                        <a href={"https://www.instagram.com/codespaceacademy/"} target={"_blank"}><img src={"images/SM-RRSS-03.png"} alt="Instagram" width={24}/></a>
-                        <a href={"https://twitter.com/codespaceacade"} target={"_blank"}><img src={"images/SM-RRSS-01.png"} alt="Twitter" width={24}/></a>
-                        <a href={"https://www.youtube.com/channel/UCShIfwOX_JfziVBJoSM6zMQ"} target={"_blank"}><img src={"images/SM-RRSS-02.png"} alt="Youtube" width={24}/></a>
-                    </p>
-                            
+
+                        <p>
+                            <a href={"https://www.facebook.com/Codespaceacademy/"} target={"_blank"}><img src={"images/SM-RRSS-04.png"} alt="Facebook" width={24} /></a>
+                            <a href={"https://www.instagram.com/codespaceacademy/"} target={"_blank"}><img src={"images/SM-RRSS-03.png"} alt="Instagram" width={24} /></a>
+                            <a href={"https://twitter.com/codespaceacade"} target={"_blank"}><img src={"images/SM-RRSS-01.png"} alt="Twitter" width={24} /></a>
+                            <a href={"https://www.youtube.com/channel/UCShIfwOX_JfziVBJoSM6zMQ"} target={"_blank"}><img src={"images/SM-RRSS-02.png"} alt="Youtube" width={24} /></a>
+                        </p>
+
                     </div>
-                
-
-
 
                     < div className="col-md-12 text-center ">
                         <p>
@@ -30,5 +27,4 @@ const Footer = () => {
 
     )
 }
-
 export default Footer;

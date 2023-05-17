@@ -30,14 +30,12 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </div>
+                    <div className=" col-md-6  d-flex justify-content-center align-self-center">
+                        <CartWidget />
+                    </div>
                 </nav>
-
             </div>
             <div>
-                <div className=" col-md-12  d-flex justify-content-center align-self-center">
-                <CartWidget />
-            </div>
-            
             </div>
         </div>
     )
