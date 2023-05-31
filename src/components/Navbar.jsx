@@ -1,5 +1,7 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
+
 
 const Navbar = () => {
     return (
@@ -9,23 +11,23 @@ const Navbar = () => {
                     <div>
                     </div>
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="/"><img src={"images/Logo-blanco.png"} alt={"Logo Code"} width={140} /></a>
+                        <Link className="navbar-brand" to="/"><img src={"images/Logo-blanco.png"} alt={"Logo Code"} width={140} /></Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="/la-escuela">La escuela</a>
+                                    <NavLink className="nav-link" aria-current="page" href="/la-escuela">La escuela</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/nuestros-cursos">Nuestros cursos</a>
+                                    <NavLink className="nav-link" to={"/category/programacion"}> Programación</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/blog">Blog</a>
+                                    <NavLink className="nav-link" to={"/category/otros"}>Tendencia</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/contacto">Contacto</a>
+                                    <NavLink className="nav-link" to={"/contacto"}>Contacto</NavLink>
                                 </li>
                             </ul>
                         </div>
