@@ -6,7 +6,7 @@ import CartWidget from "./CartWidget";
 const Navbar = () => {
     return (
         <div className="row ">
-            <div className="col-md-12">
+            <div className="col-md-12 mb-4">
                 <nav className="navbar navbar-expand-lg">
                     <div>
                     </div>

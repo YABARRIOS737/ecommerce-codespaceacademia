@@ -1,39 +1,31 @@
 import React, { useEffect, useState } from "react";
-import ItemCount from "./ItemCount";
-import products from "./json/products.json";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import {getDocs, collection, getFirestore, query, where } from "firebase/firestore";
+import Loading from "./Loading";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
     const {id} = useParams();
 
-    useEffect(() => {
-        const promesa = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(id ? products.filter(item => item.categoria === id) : products);
-            }, 2000)
+    //Consultar coleccion de productos
+    useEffect (() => {
+        const db =  getFirestore();
+        const itemsCollection = collection(db, "items");
+        const q = id ? query(itemsCollection, where("categoria", "==", id)) : itemsCollection;
+        getDocs(q).then((snapShot) => {
+            setItems(snapShot.docs.map((doc) =>({id: doc.id, ...doc.data()})));
+            setLoading(false);
         });
-
-        promesa.then((data) => {
-            setItems(data);
-        })
     }, [id]);
-
 
     return (
         <div className="container py-5">
             <div className="row">
-                <ItemList items={items} />
-                {/* <ItemCount stockAvail={25} /> */}
-                {/* <div className=" col-md-12 text-center">
-                    <div id="custIL" className="alert alert-danger" role="alert">
-                        <p>{greeting}</p>
-                    </div>
-                </div> */}
+                {loading ? <Loading/> : <ItemList items={items}/> }
             </div>
         </div>
-
     )
 }
 
