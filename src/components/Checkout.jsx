@@ -25,7 +25,7 @@ const Checkout = () => {
         addDoc(ordersCollection, order).then((snapShot) => {
             setOrderId(snapShot.id);
             
-            //Buscar y actualizar un documento
+            //Buscar y actualizar un documento.
             const orderDoc = doc(db,"orders", snapShot.id );
             updateDoc(orderDoc, {total:order.total * 0.9, quantity: order.quantity *2});
             clear();
